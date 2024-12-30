@@ -104,7 +104,7 @@ export default function Footer() {
       <p className="border-t border-slate-700 pt-2 text-center text-md font-md">
         © All Rights Reserved{" "}
         <Link
-          href="https://www.linkedin.com/in/mohamed-fawzzi-72b962280/"
+          href="https://www.linkedin.com/in/mohamed-fawzzi98/"
           rel="noopener noreferrer"
           target="_blank"
           className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text"

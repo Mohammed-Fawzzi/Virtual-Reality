@@ -17,7 +17,6 @@ VirtualR is a comprehensive platform that allows you to design virtual reality a
 
 ## Preview
 
-![Preview Image](/preview/preview.jpeg)
 ![Preview Image 1](/preview/preview1.jpeg)
 ![Preview Image 2](/preview/preview2.jpeg)
 ![Preview Image 3](/preview/preview3.jpeg)
@@ -26,4 +25,4 @@ VirtualR is a comprehensive platform that allows you to design virtual reality a
 
 ## Live Demo
 
-Check out the live demo [here](#).
+Check out the live demo [here](https://virtual-reality-mo.vercel.app/).
