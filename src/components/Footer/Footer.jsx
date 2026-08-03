@@ -1,12 +1,11 @@
-import { communityLinks, platformLinks, resourcesLinks } from "@/constants";
 import {
-  ArrowRight,
-  ChevronRight,
-  Facebook,
-  Mail,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+  communityLinks,
+  platformLinks,
+  portfolioLink,
+  resourcesLinks,
+  socialLinks,
+} from "@/constants";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -86,30 +85,38 @@ export default function Footer() {
             placeholder="Enter your email"
           />
           <ul className="flex space-x-4">
-            <li>
-              <Facebook className="hover:text-[#D85D15] duration-300" />
-            </li>
-            <li>
-              <Twitter className="hover:text-[#D85D15] duration-300" />
-            </li>
-            <li>
-              <Mail className="hover:text-[#D85D15] duration-300" />
-            </li>
-            <li>
-              <Youtube className="hover:text-[#D85D15] duration-300" />
-            </li>
+            {socialLinks.map((social) => (
+              <li key={social.label}>
+                <Link
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="inline-flex hover:opacity-80 hover:scale-110 transition-all duration-300"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="size-6"
+                    fill={social.fill}
+                    aria-hidden
+                  >
+                    <path d={social.path} />
+                  </svg>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
       <p className="border-t border-slate-700 pt-2 text-center text-md font-md">
         © All Rights Reserved{" "}
         <Link
-          href="https://www.linkedin.com/in/mohamed-fawzzi98/"
+          href={portfolioLink.href}
           rel="noopener noreferrer"
           target="_blank"
           className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text"
         >
-          Mohamed Fawzzi.
+          {portfolioLink.label}
         </Link>
       </p>
     </footer>
